@@ -74,10 +74,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculationSettingUsrCtrl.cs">
+    <Compile Include="7. Calculation Setting\CalculationSettingUsrCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CalculationSettingUsrCtrl.Designer.cs">
+    <Compile Include="7. Calculation Setting\CalculationSettingUsrCtrl.Designer.cs">
       <DependentUpon>CalculationSettingUsrCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Old %28deprecated%29\AddBrickForm.cs">
@@ -245,16 +245,16 @@
     <None Include="Resources\up-arrow.png" />
     <None Include="Resources\down-arrow.png" />
     <None Include="Resources\cross-large.png" />
-    <Content Include="SdFiles\1D_fluid_only.xml">
+    <Content Include="SDFiles\1D_fluid_only.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SdFiles\1D_fluid_solid.xml">
+    <Content Include="SDFiles\1D_fluid_solid.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SdFiles\1D_fluid_solid_wall.xml">
+    <Content Include="SDFiles\1D_fluid_solid_wall.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SdFiles\1D_solid_only.xml">
+    <Content Include="SDFiles\1D_solid_only.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UDFiles\default_ud.xml">
@@ -340,7 +340,7 @@
     <None Include="Resources\btnCold_blast_Black.png" />
     <None Include="Resources\btnCombusted_gas_Black.png" />
     <None Include="Resources\btnCombusted_gas_Green.png" />
-    <EmbeddedResource Include="CalculationSettingUsrCtrl.resx">
+    <EmbeddedResource Include="7. Calculation Setting\CalculationSettingUsrCtrl.resx">
       <DependentUpon>CalculationSettingUsrCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Old %28deprecated%29\AddBrickForm.resx">
@@ -479,9 +479,7 @@
   <ItemGroup>
     <None Include="Resources\btnCombustion_simulation_Black.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="7. Calculation Setting\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>

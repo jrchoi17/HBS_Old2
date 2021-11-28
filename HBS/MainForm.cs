@@ -34,7 +34,7 @@ namespace HBS
             _combustedGasUsrCtrl = new CombustedGasUsrCtrl();
             _coldBlastUsrCtrl = new ColdBlastUsrCtrl();
             _brickConfigurationUsrCtrl = new BrickConfigurationUsrCtrl();
-            _calculationSettingUsrCtrl = new CalculationSettingUsrCtrl();
+            _calculationSettingUsrCtrl = new CalculationSettingUsrCtrl(Application.StartupPath + Properties.Settings.Default.FILEPATH_DEFAULT_UD_XML);
             _postProcessingUsrCtrl = new PostProcessingUsrCtrl();
 #if (DEBUG)
             mnDebug.Visible = true;

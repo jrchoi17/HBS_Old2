@@ -47,6 +47,12 @@
     <Compile Include="Library\CHeatTransferConvection.cs" />
     <Compile Include="Library\CHeatTransferRadiation.cs" />
     <Compile Include="RefProp\RefProp_Wrapper.cs" />
+    <Compile Include="SingletonDataClasses\ST_UD_BrickConfiguration.cs" />
+    <Compile Include="SingletonDataClasses\ST_UD_CalculationSetting.cs" />
+    <Compile Include="SingletonDataClasses\ST_UD_ColdBlast.cs" />
+    <Compile Include="SingletonDataClasses\ST_UD_CombustedGas.cs" />
+    <Compile Include="SingletonDataClasses\ST_UD_CombustionCalculation.cs" />
+    <Compile Include="SingletonDataClasses\ST_UD_M_GasCalculation.cs" />
     <Compile Include="SolverDataClasses\CMatProp.cs" />
     <Compile Include="SolverDataClasses\CCell.cs" />
     <Compile Include="SolverDataClasses\CPseudoCell.cs" />

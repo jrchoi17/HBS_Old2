@@ -16,7 +16,7 @@ namespace HBS_Solver
             ST_SD sd = ST_SD.GetInstance();
 
             // set data from xml file
-            sd.SetDataFromXml(@"SdFiles\\1D_fluid_solid_wall.xml");
+            sd.SetDataFromXml(@"SDFiles\\1D_fluid_solid_wall.xml");
             // set data from Ud
             //sd.SetDataFromUd();
 
@@ -25,7 +25,7 @@ namespace HBS_Solver
 
             for (int cycle = 1; cycle <= sd.C_max; cycle++)
             {
-                sd.C = cycle;
+                sd.C += 1;
 
                 /// Dual-time-iterative solving
                 for (int timeStep = 1; timeStep <= sd.T_Max; timeStep++)

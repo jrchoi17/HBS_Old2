@@ -131,6 +131,17 @@ namespace HBS_Shared
                 throw CException.Show(CException.Type.NotNumber);
         }
 
+        public static bool GetxmlValueAsBool(XmlNodeList nodes, string keyword)
+        {
+            string strValue = GetXmlValueAsString(nodes, keyword);
+            bool value = false;
+
+            if (bool.TryParse(strValue, out value))
+                return value;
+            else
+                throw CException.Show(CException.Type.NotNumber);
+        }
+
         public static int GetXmlValueAsInt(XmlNodeList nodes, string keyword)
         {
             string strValue = GetXmlValueAsString(nodes, keyword);

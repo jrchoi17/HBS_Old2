@@ -1121,7 +1121,13 @@
     </UnitBrick>
   </BrickConfiguration>
   <CalculationSetting>
+    <UseConvectiveHeatLoss>true</UseConvectiveHeatLoss>
     <ConvectionHeatTransferCoefficient>100</ConvectionHeatTransferCoefficient>
     <AmbientTemperature>293.15</AmbientTemperature>
+    <CurrentCycle>0</CurrentCycle>
+    <NumberOfProcesses>2</NumberOfProcesses>
+    <ProcessTime>1200.0</ProcessTime>
+    <CurrentTime>0.0</CurrentTime>
+    <TimeInterval>1.0</TimeInterval>
   </CalculationSetting>
 </HBS_v1.1.0.3>
