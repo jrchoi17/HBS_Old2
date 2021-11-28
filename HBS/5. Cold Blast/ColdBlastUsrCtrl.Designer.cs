@@ -115,6 +115,7 @@ namespace HBS
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnNormalizing = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColdBlast)).BeginInit();
@@ -602,6 +603,7 @@ namespace HBS
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnNormalizing);
             this.panel3.Controls.Add(this.btnLoadDefault);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -875,6 +877,16 @@ namespace HBS
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.Filter = "Comma-separated values  files (*.csv)|*.csv|All files (*.*)|*.*";
             // 
+            // btnNormalizing
+            // 
+            this.btnNormalizing.Location = new System.Drawing.Point(454, 9);
+            this.btnNormalizing.Name = "btnNormalizing";
+            this.btnNormalizing.Size = new System.Drawing.Size(120, 30);
+            this.btnNormalizing.TabIndex = 30;
+            this.btnNormalizing.Text = "Normalizing";
+            this.btnNormalizing.UseVisualStyleBackColor = true;
+            this.btnNormalizing.Click += new System.EventHandler(this.btnNormalizing_Click);
+            // 
             // ColdBlastUsrCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -982,5 +994,6 @@ namespace HBS
         private System.Windows.Forms.DataVisualization.Charting.Chart chtPressure;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtTemperature;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtFlowRate;
+        private System.Windows.Forms.Button btnNormalizing;
     }
 }
