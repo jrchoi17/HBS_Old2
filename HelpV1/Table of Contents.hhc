@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="표지">
+		<param name="Local" value="htm\default.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="목차">
+		<param name="Local" value="htm\Table of Contents.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="열풍로 초기설정">
+		<param name="Local" value="htm\Initialization.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="열풍로 모듈 기능">
+		<param name="Local" value="htm\열풍로 모듈 기능.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Combustion Simulation (optional)">
+		<param name="Local" value="htm\Combustion Simulation (optional).htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Combusted Gas">
+		<param name="Local" value="htm\Combusted Gas.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Cold blast (Air + O₂)">
+		<param name="Local" value="htm\Cold blast (Air +O2).htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Ambient Conditions">
+		<param name="Local" value="htm\Ambient Conditions.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Unit Brick">
+		<param name="Local" value="htm\Unit Brick.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Stage Configurations">
+		<param name="Local" value="htm\Stage Configurations.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="해석 설정">
+		<param name="Local" value="htm\Set Simulation Setting.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="해석 결과">
+		<param name="Local" value="htm\솔루션 결과.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

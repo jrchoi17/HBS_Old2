@@ -1,0 +1,13 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=User Manual V1.chm
+Contents file=Table of Contents.hhc
+Default Font=Times New Roman,8,0
+Default topic=\htm\default.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x412 Korean (Korea)
+
+
+[INFOTYPES]
+

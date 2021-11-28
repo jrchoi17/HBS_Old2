@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Combustion Simulation (optional)</Title>
+<style>
+b{font-family: Arial}
+h1{font-family: Arial;line-height:1.0;margin-top: 0px; margin-bottom: 0px;padding-bottom: 2px;}
+h2{font-family: Arial;margin-top: 0px; margin-bottom: 0px;padding-top: 2px; padding-bottom: 5px;}
+h3{font-family: Arial;margin-top;}
+hr{margin-top: 5px; margin-bottom: 5px; padding-top: 2px; padding-bottom: 2px;}
+p{font-family: Arial; font-size: 16px; line-height:1.6;margin-top: 0px; margin-bottom: 0px;padding-top:2px;padding-bottom: 2px;}
+img{text-align:center;}
+div.figcaption{text-align:center;font-size:15px;font-family: Arial; margin-top: 15px;margin-bottom:10px}
+ul.dot {list-style-type: dot;}
+ul.square {list-style-type: square;}
+ol.roman {list-style-type: upper-roman;}
+ol.decimal {list-style-type: decimal; margin-top: 0px; margin-bottom: 0px;padding-bottom: 2px; padding-top:2px;}
+li{font-family: Arial; font-size: 16px; line-height:1.6;margin-top: 0px; margin-bottom: 0px;padding-bottom: 2px; padding-top:2px;}
+span{font-family: Arial; font-size:16px; line-height:1.6;margin-top: 0px; margin-bottom: 0px;padding-top:2px;padding-bottom: 2px;}
+sub{vertical-align: bottom; font-size: 0.6em;}
+sup{vertical-align: top; font-size: 0.6em;}
+.center{display: block; margin-left: auto; margin-right: auto; width: 50%;}
+.line{border-bottom: 1px solid black;margin-bottom:2px;}
+</style>
+</HEAD>
+<BODY>
+
+<h1>2.1 Combustion Simulation</h1><div class="line"></div>
+	<img src="Figures/Combustion_Simulation_Optional_1.png" class="center" style="width:1200; height:auto;"></br>
+	<div class=figcaption><b>Fig. 2.1-1: 열풍로 가스 계산 인터페이스</b> </div>
+<h3>2.1.1 키워드</h3>
+	<ol class = "decimal">
+	  <li>Blast Furnace Gas (BFG): <span>용광로의 가스 부산물</span></li>
+	  <li>Coke Oven Gas (COG): <span>석탄을 코크스로 전환할 때 나오는 가스</span></li>
+	  <li>X-gas: <span>연소 과정에 추가된 임의의 가스 조성(</span>LPG <span>가스, 등)</span></li>
+	  <li>M-gas: BFG/COG/X-Gas<span>의</span> Mixing mole ratio<span>에 따라 도출되는</span> Species<span>별</span> mole/mass fraction</li>
+	</ol>
+
+<h3>2.1.2 사용자 입력</h3>
+	<p><span>해석에 필요한 구성요소의 정보를 <img src="Figures/Import_CSV_File.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle"> 을 눌러 불러올 수 있다. 만약 정보를 불러오지 않을 시 프로그램 내부에 저장되어 있는</span> default <span>값으로 계산이 진행된다. 불러온 정보를 사용하고 싶지 않을 시 <img src="Figures/Load_Default.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle;"> 을 누르면 </span>default <span>값으로 초기화 된다.  반대로 저장된 값을 밖으로 불러오기 위해서는 <img src="Figures/Export_CSV_File.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle;"> 버튼을 눌러 저장이 가능하다.</span></p>
+
+<h3>2.1.3 <span>가스 조건 설정</span></h3>
+	<p><span>테이블 왼쪽 상단에 위치한 <img src="Figures/Gas_Type_Selection.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle;">들을 클릭하여 계산에 사용될 가스 종류를 선택할 수 있으며 중복선택이 가능하다. 선택된 가스 종류가 섞여있는 비율은 테이블 아래에 위치한 <img src="Figures/Mole_Mixing_Ratio.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle;"> 칸에 가스별로 각각 입력이 가능하다. 입력값은 예시와 같이 총 합이 100이 되야한다.만약</span> BFG/COG/X-Gas <span>값이 100을 초과하거나 미만일 때 <img src="Figures/Normalizing.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle;">을 눌러 값들을 100으로 표준화 시킬 수 있다.    </span>
+
+<h3>2.1.4 <span>사용자 출력</span></h3>
+	<p><span>출력될 결과는 <img src="Figures/Mole_Mass_Fraction.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle;"> 중 하나를 선택하여</span> M_Gas<span>열에 Mole Fraction 아니면 Mass Fraction이 출력될지 선택이 가능하다. <img src="Figures/Calculation.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle;">를 누르면 설정조건에 따른 열풍로 내부 유체의</span> mole/mass fraction<span>이 계산된다. 계산된 결과 값은 테이블 우측에 그래프 형태로 시각화 된다. </span>
+
+<P style="page-break-before: always">
+<h3>2.1.5 <span>연소 전 가스의</span> Mole/Mass Fraction <span>계산</span></h3>
+	<img src="Equations/Mass_Fraction.png" style="width:165; height:auto;vertical-align:middle;margin-top:5px;margin-bottom:15px;margin-left:100px">
+	<span style="margin-left:735px">(1)</span></br>
+	<img src="Equations/Mole_Fraction.png" style="width:155; height:auto; vertical-align:middle;margin-top:5px;margin-bottom:15px;margin-left:100px">
+	<span style="margin-left:745px">(2)</span></br>
+	<img src="Equations/Mole_Mixing_Ratio.png" style="width:200; height:auto; vertical-align:middle;margin-top:5px;margin-bottom:25px;margin-left:100px">
+	<span style="margin-left:700px">(3)</span></br>
+	<img src="Equations/Mass_Fraction_Gas.png" style="width:620; height:auto; vertical-align:middle;margin-top:5px;margin-bottom:25px;margin-left:100px">
+	<span style="margin-left:280px">(4)</span></br>
+	<img src="Equations/Mole_Fraction_Gas.png" style="width:620; height:auto; vertical-align:middle;margin-top:5px;margin-bottom:20px;margin-left:100px">
+	<span style="margin-left:280px">(5)</span></br>
+
+<p> <span>식(1)-(5)에서 사용된 변수들의 정의는 다음과 같다.</span>X<sub>i</sub>: <span>임의의 가스 화학종 </span>i<span>의</span> mole fraction, M<sub>i</sub>: <span>임의의 가스 화학종</span>i<span>의</span> mass fraction, <span>Φ는 혼합가스들의 비 또는</span> mixing mole ratio<span>를 나타낸다. 식(1)-(3)을 이용하여 각각의 화학종의 퍼센트 비를 구하면, 사용자가 설정한 Φ값에 따라  mole/mass fraction이 식 (4),(5)를 통하여 구해진다. </span>     
+
+<h3>2.1.5 연소 후 가스 계산 설정</h3>
+<img src="Figures/Combustion_Simulation_Optional_2.png" class="center" style="width:1200; height:auto;">
+<div class=figcaption><b>Fig. 2.1-2: 연소된 가스/연소 공기 계산 인터페이스</b> </div></br>
+
+<p><span>연소된 가스의</span> mole/mass fraction<span>을 구하기 위해서는 <b>1.3.1.2 사용자 입력</b>에서 설명한 바와 동일하게 <img src="Figures/Import_CSV_File.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">, <img src="Figures/Export_CSV_File.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">, <img src="Figures/Load_Default.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">을 클릭하여, 파일을 불러오거나, 내보내거나 프로그램의</span> default<span>값으로 설정이 가능하다. 추가된 사항으로 <img src="Figures/Accept.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">을 클릭하면</span> BFG, COG, X-gas<span> 가스 조성으로 구한</span> M-Gas<span> 물성치를 불러올 수 있다. </span></p></br>
+
+<img src="Figures/Gas_Input2.png" class="center" style="width:400; height:auto;">
+<div class=figcaption><b>Fig. 2.1-3: M-Gas/Air 초기설정값</b> </div></br>
+
+<img src="Figures/Humid_Air_Module.png" class="center" style="width:auto; height:auto;">
+<div class=figcaption><b>Fig. 2.1-4: Humid Air 모듈</b> </div></br>
+
+<p><span>연소때 사용되는 가스와 공기에 대한 정보인 질량 유량</span>[NCMH]<span>, 온도</span>[℃]<span>와 압력</span>[Pa] <span>값들은 </span><b>Fig. 1.3.1-3</b><span>와 같이 사용자가 설정이 가능하다. 연소 공기의 경우 <img src="Figures/Humid_Air.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle"> 클릭하면 실행되는 </span>Humid Air <span>모듈을 통하여 주변환경에 알맞게 설정값을 변환시킬 수 있다. 공기의 default값은 Dry Air 상태이며, 온도, 습도와 포화증기 밀도를 통하여 외부 날씨에 알맞게 설정할 수 있다. </span></p>
+
+<h3>2.1.6. <span>연소 공기의</span> Mole/Mass Fraction <span>계산</span></h3>
+
+<img src="Figures/Saturated_Vapor_Table.png" class="center" style="width:auto; height:auto;">
+<div class=figcaption><b>Fig. 2.1-5: <span>포화증기 밀도표</span></b></div>
+<img src="Figures/Saturated_Vapor_Density_Graph.png" class="center" style="width:600; height:auto;vertical-align:middle">
+<div class=figcaption><b>Fig. 2.1-6: <span>온도에 따른 포화증기 밀도 변화</span></b></div>
+<p><span>온도와 습도값을 입력한 후 <img src="Figures/Calculation.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">을 클릭하면 포화증기 밀도값</span> [g/m<sup>3</sup>]<span>이 계산된다. 포화증기 밀도값을 이용한 mole/mass fraction 계산과정은 다음과 같다.</p>
+
+	<img src="Equations/Vapor_Density.png" style="width:400; height:auto;vertical-align:middle;margin-top:5px;margin-bottom:15px;margin-left:100px">
+	<span style="margin-left:500px">(6)</span></br>
+	<img src="Equations/Mass_Fraction_Vapor.png" style="width:300; height:auto; vertical-align:middle;margin-top:5px;margin-bottom:15px;margin-left:100px">
+	<span style="margin-left:600px">(7)</span></br>
+	<img src="Equations/Vapor_Density_Water.png" style="width:300; height:auto; vertical-align:middle;margin-top:5px;margin-bottom:25px;margin-left:100px">
+	<span style="margin-left:600px">(8)</span></br>
+
+<p><span>여기서 M<sub>i</sub>와 X<sub>i</sub>는 임의의 가스 i의 molar mass와 mole fraction을 의미하고 ρ<sub>v,i</sub>는 임의의 가스 i의 증기 밀도를 이야기한다. 식 (6)에서 사용된 상수 값은 단위 치완을 위하여 1기압에서 1000 mol이 차지하는 공간을 의미한다. 구해진 증기밀도를 이용하여, 식(7)을 통하여 연소 공기의 mass fraction [m<sub>i</sub>]를 구할 수 있다. 여기서 H<sub>2</sub>O의 포화증기 밀도는 입력 변수인 습도값에 의해 정해지며 Fig. 2.1-5, 2.1-6에 참고된 값을 첨부하였다. Mole fraction은 <b>1.3.1.5</b>에서 설명 한 과정과 동일하다.</span></p></br>
+
+<p><span>연소 공기의 mole/mass fraction은 <img src="Figures/Calculation.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">을 클릭하면 되며, 계산된 값을 본 테이블로 불러올려면 <img src="Figures/Ok.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">을 선택하면 된다. 최종적으로 연소 된 가스의</span> mole/mass fraction<span>값을 <img src="Figures/Calculation.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle;">을 클릭하여 확인할 수 있으며, 연소 전 가스의 계산과 동일하게 테이블 우측에 그래프 형태로 나타난다.    </span></p> </br></br>
+
+<h3>2.1.7. <span>연소 된 가스의</span> Mole/Mass Fraction <span>계산</span></h3>
+<img src="Figures/Select_Combustion_Module.png" class="center" style="width:auto; height:auto;">
+<div class=figcaption><b>Fig. 2.1-7: <span>연소 해석 모듈</span></b></div>
+
+<img src="Figures/Width.png" class="center" style="width:500; height:auto;">
+<div class=figcaption><b>Fig. 2.1-8: <span>연소 전/후 사이간격</span></b></div>
+
+<p><span> 연소 된 가스의 </span>mole/mass fraction <span>계산을 진행하기 위해 </span>0D <span>또는</span> 1D<span> 연소 모듈을 설정할 수 있다. </span>1D <span>연소 모듈을 설정 할 경우 파라미터로 <img src="Figures/Width_Parameter.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">을 설정 할 수 있으며, 연소 전/후 가스의 사이간격을 의미한다. </span>Default<span>값은 0.3</span>m<span>로 설정되어있다. </span></p></br>
+
+<img src="Figures/Combustion_Simulation_Results.png" class="center" style="width:auto; height:auto;">
+<div class=figcaption><b>Fig. 2.1-9: <span> 연소 된 가스의 온도와 압력  값</span></b></div>
+<img src="Figures/Results.png" class="center" style="width:700; height:auto;">
+<div class=figcaption><b>Fig. 2.1-10: <span>연소 된 가스의 </span>Mole/Mass Fraction</span></b></div>
+<p><span><img src="Figures/Calculation.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">을 누르면 연소 된 가스의 온도와 압력값이 계산되어 </span>Fig. 1.3.1-9<span>와 같이 출력된다. </span>Details...<span>를 클릭하여 </span>mole/mass fraction<span>과 다른 상세 정보를 </span>Fig.1.3.1-10<span>와 같이 확인 할 수 있다.</span></p></br></br>
+</BODY>
+</HTML>

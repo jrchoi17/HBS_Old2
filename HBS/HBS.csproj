@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B953157-8C20-4A80-B648-E1256EF7A6A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HBS</RootNamespace>
+    <AssemblyName>HBS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hbs.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HBS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculationSettingUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CalculationSettingUsrCtrl.Designer.cs">
+      <DependentUpon>CalculationSettingUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\AddBrickForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\AddBrickForm.Designer.cs">
+      <DependentUpon>AddBrickForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\AmbientConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\AmbientConditionForm.Designer.cs">
+      <DependentUpon>AmbientConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\AmbientConditionsUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\AmbientConditionsUsrCtrl.Designer.cs">
+      <DependentUpon>AmbientConditionsUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6. Brick Configurations\BrickConfigurationUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="6. Brick Configurations\BrickConfigurationUsrCtrl.Designer.cs">
+      <DependentUpon>BrickConfigurationUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\BrickInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\BrickInfoForm.Designer.cs">
+      <DependentUpon>BrickInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3. Combusted Gas\CombustedGasUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="3. Combusted Gas\CombustedGasUsrCtrl.Designer.cs">
+      <DependentUpon>CombustedGasUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\DoughnutCharUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\DoughnutCharUsrCtrl.Designer.cs">
+      <DependentUpon>DoughnutCharUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2. Combustion Calculation\CombustionCalculationUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2. Combustion Calculation\CombustionCalculationUsrCtrl.Designer.cs">
+      <DependentUpon>CombustionCalculationUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormComponent\DataGridViewMethods.cs" />
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\ColdBlastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\ColdBlastForm.Designer.cs">
+      <DependentUpon>ColdBlastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\Cantera.cs" />
+    <Compile Include="1. M-Gas Calculation\FractionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\FractionForm.Designer.cs">
+      <DependentUpon>FractionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\GasCompUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\GasCompUsrCtrl.Designer.cs">
+      <DependentUpon>GasCompUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\M_GasCalculationUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\M_GasCalculationUsrCtrl.Designer.cs">
+      <DependentUpon>M_GasCalculationUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="1. M-Gas Calculation\HumidAirForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\HumidAirForm.Designer.cs">
+      <DependentUpon>HumidAirForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\NewSolutionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\NewSolutionForm.Designer.cs">
+      <DependentUpon>NewSolutionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8. Simulation Results\PostProcessingUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8. Simulation Results\PostProcessingUsrCtrl.Designer.cs">
+      <DependentUpon>PostProcessingUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8. Simulation Results\XyScatterChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8. Simulation Results\XyScatterChart.Designer.cs">
+      <DependentUpon>XyScatterChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="1. M-Gas Calculation\SelectCombustionModuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1. M-Gas Calculation\SelectCombustionModuleForm.Designer.cs">
+      <DependentUpon>SelectCombustionModuleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4. Reference Properties\ReferencePropertiesUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="4. Reference Properties\ReferencePropertiesUsrCtrl.Designer.cs">
+      <DependentUpon>ReferencePropertiesUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\SimulationSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\SimulationSettingForm.Designer.cs">
+      <DependentUpon>SimulationSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\StageConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\StageConfigurationForm.Designer.cs">
+      <DependentUpon>StageConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8. Simulation Results\TemperatureProfileUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8. Simulation Results\TemperatureProfileUsrCtrl.Designer.cs">
+      <DependentUpon>TemperatureProfileUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\UnitBrickForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old %28deprecated%29\UnitBrickForm.Designer.cs">
+      <DependentUpon>UnitBrickForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5. Cold Blast\ColdBlastUsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="5. Cold Blast\ColdBlastUsrCtrl.Designer.cs">
+      <DependentUpon>ColdBlastUsrCtrl.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\plus-button-large.png" />
+    <None Include="Resources\up-arrow.png" />
+    <None Include="Resources\down-arrow.png" />
+    <None Include="Resources\cross-large.png" />
+    <Content Include="SdFiles\1D_fluid_only.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SdFiles\1D_fluid_solid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SdFiles\1D_fluid_solid_wall.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SdFiles\1D_solid_only.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UDFiles\default_ud.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hbs.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\H13.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\H24.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\H25.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\H25S.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\H26.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\H27.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\N2.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\H11.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\N3.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\N42.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\N43.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Brick DB\S21.prop">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Old %28deprecated%29\AmbientConditionsUsrCtrl.resx">
+      <DependentUpon>AmbientConditionsUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="6. Brick Configurations\BrickConfigurationUsrCtrl.resx">
+      <DependentUpon>BrickConfigurationUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5. Cold Blast\ColdBlastUsrCtrl.resx">
+      <DependentUpon>ColdBlastUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\AnimationStyle5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\btnStage_configurations_White.png" />
+    <None Include="Resources\btnStage_configurations_Green.png" />
+    <None Include="Resources\btnStage_configurations_Black.png" />
+    <None Include="Resources\btnSectional_configurations_White.png" />
+    <None Include="Resources\btnSectional_configurations_Green.png" />
+    <None Include="Resources\btnSectional_configurations_Black.png" />
+    <None Include="Resources\btnUnit_brick_White.png" />
+    <None Include="Resources\btnUnit_brick_Green.png" />
+    <None Include="Resources\btnUnit_brick_Black.png" />
+    <None Include="Resources\btnAmbient_conditions_White.png" />
+    <None Include="Resources\btnAmbient_conditions_Green.png" />
+    <None Include="Resources\btnAmbient_conditions_Black.png" />
+    <None Include="Resources\btnGas_waste_branch_shape_White.png" />
+    <None Include="Resources\btnGas_waste_branch_shape_Green.png" />
+    <None Include="Resources\btnGas_waste_branch_shape_Black.png" />
+    <None Include="Resources\btnInsulation_bricks_shape_White.png" />
+    <None Include="Resources\btnInsulation_bricks_shape_Green.png" />
+    <None Include="Resources\btnInsulation_bricks_shape_Black.png" />
+    <None Include="Resources\btnCombustion_chamber_shape_White.png" />
+    <None Include="Resources\btnCombustion_chamber_shape_Green.png" />
+    <None Include="Resources\btnCombustion_chamber_shape_Black.png" />
+    <None Include="Resources\btnDome_shape_White.png" />
+    <None Include="Resources\btnDome_shape_Green.png" />
+    <None Include="Resources\btnDome_shape_Black.png" />
+    <None Include="Resources\btnCold_blast_White.png" />
+    <None Include="Resources\btnCold_blast_Green.png" />
+    <None Include="Resources\btnCold_blast_Black.png" />
+    <None Include="Resources\btnCombusted_gas_Black.png" />
+    <None Include="Resources\btnCombusted_gas_Green.png" />
+    <EmbeddedResource Include="CalculationSettingUsrCtrl.resx">
+      <DependentUpon>CalculationSettingUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old %28deprecated%29\AddBrickForm.resx">
+      <DependentUpon>AddBrickForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old %28deprecated%29\AmbientConditionForm.resx">
+      <DependentUpon>AmbientConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old %28deprecated%29\BrickInfoForm.resx">
+      <DependentUpon>BrickInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old %28deprecated%29\ColdBlastForm.resx">
+      <DependentUpon>ColdBlastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Combusted Gas\CombustedGasUsrCtrl.resx">
+      <DependentUpon>CombustedGasUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. M-Gas Calculation\HumidAirForm.resx">
+      <DependentUpon>HumidAirForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. M-Gas Calculation\SelectCombustionModuleForm.resx">
+      <DependentUpon>SelectCombustionModuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. M-Gas Calculation\DoughnutCharUsrCtrl.resx">
+      <DependentUpon>DoughnutCharUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Combustion Calculation\CombustionCalculationUsrCtrl.resx">
+      <DependentUpon>CombustionCalculationUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="8. Simulation Results\PostProcessingUsrCtrl.resx">
+      <DependentUpon>PostProcessingUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="8. Simulation Results\XyScatterChart.resx">
+      <DependentUpon>XyScatterChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4. Reference Properties\ReferencePropertiesUsrCtrl.resx">
+      <DependentUpon>ReferencePropertiesUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old %28deprecated%29\SimulationSettingForm.resx">
+      <DependentUpon>SimulationSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old %28deprecated%29\StageConfigurationForm.resx">
+      <DependentUpon>StageConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="8. Simulation Results\TemperatureProfileUsrCtrl.resx">
+      <DependentUpon>TemperatureProfileUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old %28deprecated%29\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old %28deprecated%29\UnitBrickForm.resx">
+      <DependentUpon>UnitBrickForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\btnCombusted_gas_White.png" />
+    <EmbeddedResource Include="1. M-Gas Calculation\FractionForm.resx">
+      <DependentUpon>FractionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. M-Gas Calculation\GasCompUsrCtrl.resx">
+      <DependentUpon>GasCompUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. M-Gas Calculation\M_GasCalculationUsrCtrl.resx">
+      <DependentUpon>M_GasCalculationUsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\NewSolutionForm.resx">
+      <DependentUpon>NewSolutionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="VolumeTemperatures.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unit_brick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sectional_stage_configuration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internal_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HBS_Shared\HBS_Shared.csproj">
+      <Project>{1207a3da-808d-45e8-a17d-95f25ac5b797}</Project>
+      <Name>HBS_Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HBS_Solver\HBS_Solver.csproj">
+      <Project>{5108ba35-84dc-4617-a438-211bf153d475}</Project>
+      <Name>HBS_Solver</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCombustion_simulation_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCombustion_simulation_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCombustion_simulation_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="7. Calculation Setting\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

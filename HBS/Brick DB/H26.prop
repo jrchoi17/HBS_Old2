@@ -1,0 +1,17 @@
+﻿property0{
+name	method	values	bound
+density	polynomial	2580.0	273.15,1773.15
+specific-heat	polynomial	1100.0	273.15,1773.15
+thermal-conductivity	polynomial	1.300833,0.00018	273.15,1773.15
+}/property0
+
+information{
+maximum_temperature	-
+apparent_porosity	≤24.0
+apparent_density	≥1900.0
+cold_compressive_strength	≥300.0
+high_temperature_load_softening_T1	1350.0
+high_temperature_load_softening_T2	-
+Al2O3_content	≥60.0
+fire resistance	≥36.0
+}/information

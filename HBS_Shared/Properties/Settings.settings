@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HBS_Shared.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MSG_INPUT_NUMBER" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Please input a number.</Value>
+    </Setting>
+    <Setting Name="MSG_INPUT_POSITIVE_NUMBER_WITHOUT_ZERO" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The valid number range is number &gt; 0.</Value>
+    </Setting>
+    <Setting Name="MSG_INPUT_POSITIVE_NUMBER_WITH_ZERO" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The valid number range is number ≥ 0.</Value>
+    </Setting>
+    <Setting Name="MSG_INPUT_NUMBER_RANGE_TEMPERATURE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The valid temperature range is in between aaa ℃ ≤ Temperature ≤ bbb ℃.</Value>
+    </Setting>
+    <Setting Name="MSG_INPUT_NUMBER_RANGE_PRESSURE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The valid pressure range is in between aaa mmAq ≤ Temperature ≤ bbb mmAq.</Value>
+    </Setting>
+    <Setting Name="MSG_CHECK_CHECKBOX" Type="System.String" Scope="User">
+      <Value Profile="(Default)">You must select at least 1 gas type.</Value>
+    </Setting>
+    <Setting Name="MSG_INPUT_NUMBER_RANGE_FLOWRATE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The valid pressure range is in between aaa N㎥/hr ≤ Flow Rate ≤ bbb N㎥/hr.</Value>
+    </Setting>
+    <Setting Name="MSG_INPUT_NUMBER_RANGE_CYCLE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The valid cycle range is in between aaa ≤ Cycle(s) ≤ bbb.</Value>
+    </Setting>
+    <Setting Name="MSG_INPUT_VALUE_RANGE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The valid range is in between aaa ≤ value(s) ≤ bbb.</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

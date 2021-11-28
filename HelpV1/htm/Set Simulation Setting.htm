@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Set Simulation Setting</Title>
+<style>
+b{font-family: Arial; }
+h1{font-family: Arial;line-height:1.0;margin-top: 0px; margin-bottom: 0px;padding-bottom: 2px;}
+h2{font-family: Arial;margin-top: 0px; margin-bottom: 0px;padding-top: 2px; padding-bottom: 5px;}
+h3{font-family: Arial;margin-top;}
+hr{margin-top: 5px; margin-bottom: 5px; padding-top: 2px; padding-bottom: 2px;}
+p{font-family: Arial; font-size: 16px; line-height:1.6;margin-top: 0px; margin-bottom: 0px;padding-top:2px;padding-bottom: 2px;}
+img{text-align:center;}
+div.figcaption{text-align:center;font-size:15px;font-family: Arial; margin-top: 15px;margin-bottom:10px}
+ul.dot {list-style-type: dot;}
+ul.square {list-style-type: square;}
+ol.roman {list-style-type: upper-roman;}
+ol.decimal {list-style-type: decimal; margin-top: 0px; margin-bottom: 0px;padding-bottom: 2px; padding-top:2px;}
+li{font-family: Arial; font-size: 16px; line-height:1.6;margin-top: 0px; margin-bottom: 0px;padding-bottom: 2px; padding-top:2px;}
+span{font-family: Arial; font-size:16px; line-height:1.6;margin-top: 0px; margin-bottom: 0px;padding-top:2px;padding-bottom: 2px;}
+sub{vertical-align: bottom; font-size: 0.6em;}
+sup{vertical-align: top; font-size: 0.6em;}
+.center{display: block; margin-left: auto; margin-right: auto; width: 50%;}
+.line{border-bottom: 1px solid black;margin-bottom:2px;}
+</style>
+</HEAD>
+	<h1>3. 해석 설정</h1><div class="line"></div>
+<BODY>
+<img src="Figures/Set_Simulation_Setting.png" class="center" style="width:auto; height:auto;margin-top:15px;">
+<div class=figcaption><b>Fig. 3-1: 해석 설정 모듈</b></div>
+<p>열풍로 내부에서의 유동현상을 해석진해을 위한 Solver 변수들을 지정해주는 인터페이스이다. </p>
+
+<img src="Figures/Simulation_Time_Setting.png" class="center" style="width:auto; height:auto;margin-top:15px;">
+<div class=figcaption><b>Fig. 3-2: 해석 시간 설정</b></div>
+<p>해석이 시작 되는 시간을 분단위로 설정하고, 계산 결과의 출력 interval을 초단위로 사용자가 설정 할 수 있다.</p>
+
+<img src="Figures/External_Wall.png" class="center" style="width:auto; height:auto;margin-top:15px;">
+<div class=figcaption><b>Fig. 3-3: 벽 근처에서의 유동 계산</b></div>
+<p>Wall model 사용하면 외벽에서의 온도의 측정이 가능하고, 사용하지 않을 시 외벽에서의 온도 측정을 제외하고 계산을 진행한다. </p>
+
+<img src="Figures/Heat_Transfer_Model.png" class="center" style="width:auto; height:auto;margin-top:15px;">
+<div class=figcaption><b>Fig. 3-4: 열전달 모델</b></div>
+<p>열풍로에서의 열전달 해석을 진행할 때 radiation heat transfer model을 사용하여 복사열에 의한 영향요소를 고려할지 선택이 가능하다. </p>
+
+<img src="Figures/Stopping_Criteria.png" class="center" style="width:auto; height:auto;margin-top:15px;">
+<div class=figcaption><b>Fig. 3-5: 해석종료 조건</b></div>
+<p>몇 번의 cycle이 돌아간 후 햬석을 종료할 지 사용자가 선택이 가능하다.</p>
+
+<img src="Figures/Parallelization_Function.png" class="center" style="width:auto; height:auto;margin-top:15px;">
+<div class=figcaption><b>Fig. 3-6: 계산 병렬화</b></div>
+<p>Serial Calculation을 선택할 시 컴퓨터 코어 한개를 사용하여 해석을 진행한다. 병렬 계산을 진행 할 시 여러개의 코어를 사용하여 해석을 진행하여 계산 시간을 감소시킨다. 최대 코어 개수는 프로그램이 사용되는 컴퓨터 사양에 따라 조정 가능하다. 최대 코어 개수는 4로 설정되어 있다.</p>
+
+<h3>  3.1 Simulation <span>실행</span></h3>
+	<img src="Figures/5_Run_Simulation.png" class="center" style="width:auto; height:auto;"></br>
+	<div class=figcaption><b>Fig. 3.1-1</b>  </div>
+	<p><span> 설정 세팅이 완료되면 <img src="Figures/Run_Simulation.png" style="display:inline;margin-top:2;margin-bottom:2;vertical-align:middle">을 클릭하여 해석을 진행시킨다.</span></p>
+</BODY>
+</HTML>
