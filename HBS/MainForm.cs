@@ -16,6 +16,7 @@ namespace HBS
 {
     public partial class MainForm : Form
     {
+        private AboutUs aboutUS = new AboutUs();
         private M_GasCalculationUsrCtrl _m_GasCalculationUsrCtrl;
         private CombustionCalculationUsrCtrl _combustionCalculationUsrCtrl;
         private CombustedGasUsrCtrl _combustedGasUsrCtrl;
@@ -292,7 +293,7 @@ namespace HBS
         }
         #endregion
 
-        #region Menu evenrt methods::Help
+        #region Menu event methods::Help
         private void mnHelp_Click(object sender, EventArgs e)
         {
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\HelpV2";
@@ -359,8 +360,12 @@ namespace HBS
                 sub.Visible = false;
             }
         }
+
         #endregion
 
-
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aboutUS.ShowDialog();
+        }
     }
 }

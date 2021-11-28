@@ -40,13 +40,13 @@ namespace HBS
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.chtPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -54,9 +54,6 @@ namespace HBS
             this.chtFlowRate = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCombustedGas = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFlowOperatingConditions = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +72,10 @@ namespace HBS
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Normalizing = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGas_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chtPressure)).BeginInit();
@@ -240,7 +241,7 @@ namespace HBS
             this.dgvCombustedGas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.dataGridViewTextBoxColumn1});
+            this.ColumnGas_2});
             this.dgvCombustedGas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCombustedGas.Location = new System.Drawing.Point(3, 3);
             this.dgvCombustedGas.MultiSelect = false;
@@ -254,29 +255,6 @@ namespace HBS
             this.dgvCombustedGas.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCombustedGas_CellValidated);
             this.dgvCombustedGas.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvCombustedGas_CellValidating);
             this.dgvCombustedGas.Resize += new System.EventHandler(this.dgvCombustedGas_Resize);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Species";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column2.HeaderText = "Molar Mass [g/mol]";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mole Fraction";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dgvFlowOperatingConditions
             // 
@@ -396,6 +374,7 @@ namespace HBS
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Normalizing);
             this.panel2.Controls.Add(this.btnLoadDefault);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
@@ -464,6 +443,39 @@ namespace HBS
             // 
             this.saveFileDialog.Filter = "Comma-separated values  files (*.csv)|*.csv|All files (*.*)|*.*";
             // 
+            // Normalizing
+            // 
+            this.Normalizing.Location = new System.Drawing.Point(531, 7);
+            this.Normalizing.Name = "Normalizing";
+            this.Normalizing.Size = new System.Drawing.Size(120, 30);
+            this.Normalizing.TabIndex = 21;
+            this.Normalizing.Text = "Normalizing";
+            this.Normalizing.UseVisualStyleBackColor = true;
+            this.Normalizing.Click += new System.EventHandler(this.Normalizing_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Species";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column2.HeaderText = "Molar Mass [g/mol]";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ColumnGas_2
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnGas_2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColumnGas_2.HeaderText = "Mole Fraction";
+            this.ColumnGas_2.Name = "ColumnGas_2";
+            this.ColumnGas_2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // CombustedGasUsrCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -515,11 +527,12 @@ namespace HBS
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPressure;
         private System.Windows.Forms.DataGridView dgvCombustedGas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button Normalizing;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGas_2;
     }
 }

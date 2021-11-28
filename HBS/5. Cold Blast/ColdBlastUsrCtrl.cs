@@ -727,6 +727,54 @@ namespace HBS
             CPressure O2EqualizingPressure = int.Parse(txtO2PressureEqualizing.Text);
             ud.ColdBlast.O2_EqualizingPressure = O2EqualizingPressure[CPressure.Unit.Pa];
         }
+
+
+        private double ListToDouble(List<double> value, int i)
+        {
+            return value[i];
+        }
+
+
+        public void SetNormalizing()
+        {
+            DataGridView dataGridView1 = dgvColdBlast;
+
+            CGas ColdBlastAir = new CGas();
+            CGas ColdBlastO2 = new CGas();
+            ColdBlastAir.MoleFraction = new CGas.Fraction(0.0);
+            ColdBlastO2.MoleFraction = new CGas.Fraction(0.0);
+
+
+
+            List<double> Air = GetData(2, dataGridView1);
+            List<double> O2 = GetData(3, dataGridView1);
+
+            foreach (CGas.Composition comp in CGas.GetCompositionList())
+            {
+                double value = ListToDouble(Air, Convert.ToInt32(comp));
+                double value2 = ListToDouble(O2, Convert.ToInt32(comp));
+                ColdBlastAir.MoleFraction[comp] = value;
+                ColdBlastO2.MoleFraction[comp] = value2;
+            }
+
+            ColdBlastAir.MoleFraction.Normalize();
+            ColdBlastAir.MoleFractionToMassFraction();
+            ColdBlastO2.MoleFraction.Normalize();
+            ColdBlastO2.MoleFractionToMassFraction();
+
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                CGas.Composition comp = DataGridViewMethods.GetCompositionOnDataGridView(dataGridView1, i);
+                dataGridView1[2, i].Value = (ColdBlastAir.MoleFraction[comp] * 100.0).ToString("#0.00");
+                dataGridView1[3, i].Value = (ColdBlastO2.MoleFraction[comp] * 100.0).ToString("#0.00");
+            }
+
+
+        }
+        private void btnNormalizing_Click(object sender, EventArgs e)
+        {
+            SetNormalizing();
+        }
     }
     #endregion
 }

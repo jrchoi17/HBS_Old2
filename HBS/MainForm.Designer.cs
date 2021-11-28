@@ -237,6 +237,7 @@ namespace HBS
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
             this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.aboutUsToolStripMenuItem.Text = "About Us(&A)";
+            this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 

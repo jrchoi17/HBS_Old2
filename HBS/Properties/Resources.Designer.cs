@@ -453,6 +453,16 @@ namespace HBS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HBS_logo {
+            get {
+                object obj = ResourceManager.GetObject("HBS_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Internal_main {
             get {
                 object obj = ResourceManager.GetObject("Internal_main", resourceCulture);

@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="CalculationSettingUsrCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -245,6 +251,7 @@
     <None Include="Resources\up-arrow.png" />
     <None Include="Resources\down-arrow.png" />
     <None Include="Resources\cross-large.png" />
+    <None Include="Resources\HBS_logo.png" />
     <Content Include="SdFiles\1D_fluid_only.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -299,6 +306,9 @@
     <Content Include="Brick DB\S21.prop">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Old %28deprecated%29\AmbientConditionsUsrCtrl.resx">
       <DependentUpon>AmbientConditionsUsrCtrl.cs</DependentUpon>
     </EmbeddedResource>

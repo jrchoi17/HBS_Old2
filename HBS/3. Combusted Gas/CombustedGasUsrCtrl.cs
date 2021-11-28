@@ -21,10 +21,15 @@ namespace HBS
 
         #region Variables
         public bool IsFinish { get; set; }
+
+        public enum FractionType { Mole = 0, Mass }
         public string Column0Name { get; set; }
         public string Column1Name { get; set; }
         public string Column2Name { get; set; }
         public string Column3Name { get; set; }
+
+        private List<CGas> Gases = new List<CGas>();
+
         #endregion
 
 
@@ -489,6 +494,43 @@ namespace HBS
         private void chtTemperature_MouseMove(object sender, MouseEventArgs e)
         {
             ShowToolTipAtPoint(sender, e, chtTemperature, "0.00");
+        }
+        
+       private double ListToDouble(List<double> value, int i)
+        {
+            return value[i];
+        }
+      
+  
+        public void SetNormalizing()
+        {
+            DataGridView dataGridView1 = dgvCombustedGas;
+
+            CGas CombustedGas = new CGas();
+            CombustedGas.MoleFraction = new CGas.Fraction(0.0);
+            List<double> Gas = GetData(2, dataGridView1);
+
+            foreach (CGas.Composition comp in CGas.GetCompositionList())
+            {
+                
+                double value = ListToDouble(Gas, Convert.ToInt32(comp));
+
+                CombustedGas.MoleFraction[comp] = value;
+            }
+
+            CombustedGas.MoleFraction.Normalize();
+            CombustedGas.MoleFractionToMassFraction();
+
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                CGas.Composition comp = DataGridViewMethods.GetCompositionOnDataGridView(dataGridView1, i);
+                dataGridView1[2, i].Value = (CombustedGas.MoleFraction[comp] * 100.0).ToString("#0.00");
+            }
+        }
+ 
+        private void Normalizing_Click(object sender, EventArgs e)
+        {
+            SetNormalizing();
         }
     }
 }
